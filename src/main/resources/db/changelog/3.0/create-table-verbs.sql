@@ -1,0 +1,16 @@
+--liquibase formatted sql
+--changeset sergei:3
+
+CREATE TABLE IF NOT EXISTS verbs(
+id UUID PRIMARY KEY,
+je VARCHAR(20) NOT NULL,
+tu VARCHAR(20) NOT NULL,
+il VARCHAR(20) NOT NULL,
+elle VARCHAR(20) NOT NULL,
+nous VARCHAR(20) NOT NULL,
+vous VARCHAR(20) NOT NULL,
+ils VARCHAR(20) NOT NULL,
+elles VARCHAR(20) NOT NULL
+);
+
+--rollback DROP TABLE verbs;
