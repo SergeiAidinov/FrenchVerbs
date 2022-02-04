@@ -10,5 +10,6 @@
     <include file="db/changelog/creatingTables/create-table-users.sql"/>
     <include file="db/changelog/creatingTables/create-table-pronoms.sql"/>
     <include file="db/changelog/creatingTables/create-table-verbs.sql"/>
-    <include file="db/changelog/creatingTables/create-cross-table-user-verb.sql"/>  
+    <include file="db/changelog/creatingTables/create-cross-table-user-verb.sql"/>
+    <include file="db/changelog/creatingTables/create-index.sql"/>    
 </databaseChangeLog> 
