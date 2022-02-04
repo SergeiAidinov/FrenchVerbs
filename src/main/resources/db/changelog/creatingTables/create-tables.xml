@@ -7,5 +7,8 @@
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
       http://www.liquibase.org/xml/ns/pro 
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">  
-    <include file="db/changelog/1.0/create-table-users.sql"/>  
+    <include file="db/changelog/creatingTables/create-table-users.sql"/>
+    <include file="db/changelog/creatingTables/create-table-pronoms.sql"/>
+    <include file="db/changelog/creatingTables/create-table-verbs.sql"/>
+    <include file="db/changelog/creatingTables/create-cross-table-user-verb.sql"/>  
 </databaseChangeLog> 

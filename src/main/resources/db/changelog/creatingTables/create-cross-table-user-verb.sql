@@ -7,10 +7,10 @@ userId UUID,
 verbId UUID,
 CONSTRAINT fk_users
       FOREIGN KEY(userId) 
-	  REFERENCES users(id),
+	  REFERENCES users(id) ON DELETE CASCADE,
 CONSTRAINT fk_verbs
       FOREIGN KEY(verbId) 
-	  REFERENCES verbs(id)
+	  REFERENCES verbs(id) ON DELETE CASCADE
 );
 
 --rollback DROP TABLE cross_table_user_verb;
