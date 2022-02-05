@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset sergei:4
+--changeset sergei:8a7bac51-3090-4e79-acb1-cf7a8795537a
 
 CREATE TABLE IF NOT EXISTS cross_table_user_verb (
 id UUID PRIMARY KEY,

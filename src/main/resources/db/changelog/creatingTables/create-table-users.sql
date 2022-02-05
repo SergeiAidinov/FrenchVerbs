@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset sergei:1
+--changeset sergei:b761d58a-9095-4450-b3e5-71634ca48f5a
 
 CREATE TABLE IF NOT EXISTS users(
 id UUID PRIMARY KEY,

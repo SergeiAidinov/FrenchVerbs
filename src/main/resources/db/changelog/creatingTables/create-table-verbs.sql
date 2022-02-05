@@ -1,8 +1,9 @@
 --liquibase formatted sql
---changeset sergei:3
+--changeset sergei:d05e5008-c799-4d62-8850-754f6bf6c915
 
 CREATE TABLE IF NOT EXISTS verbs(
 id UUID PRIMARY KEY,
+infinitive VARCHAR(20) NOT NULL,
 je VARCHAR(20) NOT NULL,
 tu VARCHAR(20) NOT NULL,
 il VARCHAR(20) NOT NULL,
@@ -13,4 +14,4 @@ ils VARCHAR(20) NOT NULL,
 elles VARCHAR(20) NOT NULL
 );
 
---rollback DROP TABLE verbs;
+--rollback DELETE FROM verbs;
