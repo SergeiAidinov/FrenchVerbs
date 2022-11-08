@@ -14,10 +14,17 @@ class VerbRepositoryTest {
     @Qualifier("mainservice")
     MainService mainService;
 
+    @Autowired
+    VerbRepository verbRepository;
+
     @Test
     public void test(){
         Iterable<Verb> iterableVerb = mainService.find();
         System.out.println(iterableVerb);
+
+        Verb verb = verbRepository.findByInfinitive("aller");
+        System.out.println(verb);
+
     }
 
 

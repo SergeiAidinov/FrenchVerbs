@@ -2,24 +2,18 @@ package ru.yandex.incoming34.FrenchVerbs.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
-import java.util.UUID;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-
-
 @Entity
 public class Verb {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "verb_id", nullable = false)
-    private UUID verb_id;
-
     private String infinitive;
     private String je;
     private String tu;
