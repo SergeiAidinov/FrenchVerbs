@@ -12,23 +12,23 @@ import javax.sql.DataSource;
 @PropertySource("classpath:application.properties")
 public class DataSourceConfig {
 
-    @Value("${spring.driver-class-name}")
-    String driver;
-    @Value("${spring.datasource.url}")
-    String url;
-    @Value("${spring.datasource.username}")
-    String userName;
-    @Value("${spring.datasource.password}")
-    String password;
+	@Value("${spring.driver-class-name}")
+	String driver;
+	@Value("${spring.datasource.url}")
+	String url;
+	@Value("${spring.datasource.username}")
+	String userName;
+	@Value("${spring.datasource.password}")
+	String password;
 
-    @Bean
-    public DataSource getDataSource() {
-        DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName(driver);
-        dataSourceBuilder.url(url);
-        dataSourceBuilder.username(userName);
-        dataSourceBuilder.password(password);
-        return dataSourceBuilder.build();
-    }
+	@Bean
+	public DataSource getDataSource() {
+		DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
+		dataSourceBuilder.driverClassName(driver);
+		dataSourceBuilder.url(url);
+		dataSourceBuilder.username(userName);
+		dataSourceBuilder.password(password);
+		return dataSourceBuilder.build();
+	}
 
 }

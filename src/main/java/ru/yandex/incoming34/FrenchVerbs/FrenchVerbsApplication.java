@@ -9,7 +9,6 @@ import ru.yandex.incoming34.FrenchVerbs.repository.VerbRepository;
 @SpringBootApplication
 public class FrenchVerbsApplication {
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(FrenchVerbsApplication.class, args);
 		System.out.println("!!!!!!");

@@ -10,22 +10,21 @@ import ru.yandex.incoming34.FrenchVerbs.entity.Verb;
 @SpringBootTest
 class VerbRepositoryTest {
 
-    @Autowired
-    @Qualifier("mainservice")
-    MainService mainService;
+	@Autowired
+	@Qualifier("mainservice")
+	MainService mainService;
 
-    @Autowired
-    VerbRepository verbRepository;
+	@Autowired
+	VerbRepository verbRepository;
 
-    @Test
-    public void test(){
-        Iterable<Verb> iterableVerb = mainService.find();
-        System.out.println(iterableVerb);
+	@Test
+	public void test() {
+		Iterable<Verb> iterableVerb = mainService.find();
+		System.out.println(iterableVerb);
 
-        Verb verb = verbRepository.findByInfinitive("aller");
-        System.out.println(verb);
+		Verb verb = verbRepository.findByInfinitive("aller");
+		System.out.println(verb);
 
-    }
-
+	}
 
 }

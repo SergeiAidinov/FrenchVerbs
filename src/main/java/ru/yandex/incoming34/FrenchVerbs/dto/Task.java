@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public class Task {
 
-    private final String infinitive;
-    private final String grammaticalPerson;
-    private final String correctAnswer;
+	private final String infinitive;
+	private final String grammaticalPerson;
+	private final String correctAnswer;
 }

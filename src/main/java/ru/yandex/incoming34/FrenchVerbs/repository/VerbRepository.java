@@ -12,10 +12,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public  interface VerbRepository extends CrudRepository<Verb, UUID> {
+public interface VerbRepository extends CrudRepository<Verb, UUID> {
 
-
-     Verb findByInfinitive(String infinitive);
-
+	Verb findByInfinitive(String infinitive);
 
 }
