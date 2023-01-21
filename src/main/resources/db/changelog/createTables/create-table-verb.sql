@@ -3,8 +3,8 @@
 
 --CREATE IF NOT EXISTS EXTENSION "uuid-ossp";
 CREATE TABLE IF NOT EXISTS verb(
-
-                        infinitive VARCHAR(15) UNIQUE NOT NULL  PRIMARY KEY,
+id SERIAL PRIMARY KEY,
+                        infinitive VARCHAR(15) UNIQUE NOT NULL,
                         je VARCHAR(15) NOT NULL,
                         tu VARCHAR(15) NOT NULL,
                         il VARCHAR(15) NOT NULL,

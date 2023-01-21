@@ -6,8 +6,11 @@
 
 	<include file="db/changelog/createTables/create-table-verb.xml" />
 	<include file="db/changelog/createTables/create-table-user.xml" />
-	<include file="db/changelog/createTables/create-link-table-user_verb.xml" />
 	<include file="db/changelog/fillTables/fill-table-verb.xml" />
+	
+	<!--
+	<include file="db/changelog/createTables/create-link-table-user_verb.xml" />
+	-->
 
 
 </databaseChangeLog> 

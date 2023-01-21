@@ -1,15 +1,17 @@
 package ru.yandex.incoming34.FrenchVerbs.config;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-
 import javax.sql.DataSource;
 
-@Configuration
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
+
+@SpringBootConfiguration
 @PropertySource("classpath:application.properties")
+@ComponentScan(basePackages = "ru.yandex.incoming34.FrenchVerbs.**")
 public class DataSourceConfig {
 
 	@Value("${spring.driver-class-name}")
