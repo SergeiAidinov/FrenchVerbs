@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.yandex.incoming34.FrenchVerbs.entity.Verb;
 import ru.yandex.incoming34.FrenchVerbs.repository.VerbRepository;
 
+//@Controller
 @RestController
 public class VerbController {
 

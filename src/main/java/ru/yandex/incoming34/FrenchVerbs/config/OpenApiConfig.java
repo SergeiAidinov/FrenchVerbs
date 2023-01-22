@@ -2,13 +2,16 @@ package ru.yandex.incoming34.FrenchVerbs.config;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 
 @SpringBootConfiguration
-//@ComponentScan("ru.yandex.incoming34.FrenchVerbs.controller.*")
+//@ComponentScan(value = { "ru.yandex.incoming34.FrenchVerbs.controller.*" })
+@ComponentScan(basePackageClasses = { ru.yandex.incoming34.FrenchVerbs.controller.VerbController.class })
+//@ComponentScan("ru.yandex.incoming34.FrenchVerbs.**")
 public class OpenApiConfig {
 
 	@Bean
