@@ -4,17 +4,10 @@
 CREATE TABLE IF NOT EXISTS user_verb (
     id    UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
     user_id    UUID NOT NULL,
-    verb    VARCHAR(15) NOT NULL,
-	CONSTRAINT fk_user
-   FOREIGN KEY(user_id) 
-   REFERENCES users_table(id)
-   ON DELETE cascade
-   ON UPDATE cascade,
-   CONSTRAINT fk_verb
-   FOREIGN KEY(verb) 
-   REFERENCES verb(infinitive)
-   ON DELETE cascade
-   ON UPDATE cascade
+    verb    INTEGER NOT NULL,
+CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES table_user(id) ON DELETE cascade ON UPDATE cascade,
+CONSTRAINT fk_verb FOREIGN KEY(verb) REFERENCES verb(verb_id)  ON DELETE cascade ON UPDATE cascade,
+CONSTRAINT user_verb_unique UNIQUE (user_id, verb)
 );
 
 --rollback DROP TABLE user_verb;
