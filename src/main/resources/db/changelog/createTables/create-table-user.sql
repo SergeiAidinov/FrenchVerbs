@@ -6,9 +6,7 @@ CREATE TABLE IF NOT EXISTS users_table (
     given_name    VARCHAR(25) NOT NULL,
     family_name    VARCHAR(25) NOT NULL,
     email  VARCHAR(35) NOT NULL,
-    password    VARCHAR(64) NOT NULL,
-    verbs TEXT
-
+    password    VARCHAR(64) NOT NULL
 );
 
 --rollback DROP TABLE user;
