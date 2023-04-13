@@ -24,7 +24,7 @@ public class Verb {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "verb_id")
 	private Integer id;
 	private String infinitive;
 	private String je;
