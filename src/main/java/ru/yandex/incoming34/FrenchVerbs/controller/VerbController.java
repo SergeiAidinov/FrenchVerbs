@@ -28,7 +28,7 @@ public class VerbController {
 		return verbRepository.findAll();
 	}
 
-	@PutMapping("/add_verb/{userId}/{verbId}")
+	@PutMapping("/new_verb_in_list/{userId}/{verbId}")
 	public Optional<Verb> addVerb(@Schema(example = "77858ba0-56d7-44e0-b190-dd659d243ef0") @PathVariable UUID userId,
 			@Schema(example = "1") @PathVariable Integer verbId) {
 
@@ -38,7 +38,7 @@ public class VerbController {
 
 	}
 
-	@DeleteMapping("/delete_verb/{userId}/{verbId}")
+	@DeleteMapping("/verb_to_be_removed_from_list/{userId}/{verbId}")
 	public Optional<Verb> deleteVerb(
 			@Schema(example = "77858ba0-56d7-44e0-b190-dd659d243ef0") @PathVariable UUID userId,
 			@Schema(example = "1") @PathVariable Integer verbId) {
