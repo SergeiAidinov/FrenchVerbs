@@ -23,12 +23,12 @@ public class VerbController {
 	private final VerbRepository verbRepository;
 	private final UserVerbRepository userVerbRepository;
 
-	@GetMapping("/allverbs")
+	@GetMapping("/all_verbs")
 	public Iterable<Verb> allVerbs() {
 		return verbRepository.findAll();
 	}
 
-	@PutMapping("/addverb/{userId}/{verbId}")
+	@PutMapping("/add_verb/{userId}/{verbId}")
 	public Optional<Verb> addVerb(@Schema(example = "77858ba0-56d7-44e0-b190-dd659d243ef0") @PathVariable UUID userId,
 			@Schema(example = "1") @PathVariable Integer verbId) {
 
@@ -38,7 +38,7 @@ public class VerbController {
 
 	}
 
-	@DeleteMapping("/deleteverb/{userId}/{verbId}")
+	@DeleteMapping("/delete_verb/{userId}/{verbId}")
 	public Optional<Verb> deleteVerb(
 			@Schema(example = "77858ba0-56d7-44e0-b190-dd659d243ef0") @PathVariable UUID userId,
 			@Schema(example = "1") @PathVariable Integer verbId) {
@@ -49,6 +49,15 @@ public class VerbController {
 		} else {
 			return Optional.empty();
 		}
+
+	}
+
+	@GetMapping("/all_verbs_of_user/{userId}")
+	public Iterable<Verb> allVerbsOfUser(
+			@Schema(example = "77858ba0-56d7-44e0-b190-dd659d243ef0") @PathVariable UUID userId) {
+
+		Iterable<Integer> verbsIds = userVerbRepository.findAllVerbIdsByUserId(userId);
+		return verbRepository.findAllById(verbsIds);
 
 	}
 

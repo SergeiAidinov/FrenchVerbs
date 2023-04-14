@@ -20,4 +20,7 @@ public interface UserVerbRepository extends CrudRepository<UserVerb, UUID> {
 	@Query(nativeQuery = true, value = "DELETE FROM user_verb WHERE user_id = :userId AND verb = :verb")
 	Integer deleteByUserIdAndVerb(@Param("userId") UUID userId, @Param("verb") Integer verb);
 
+	@Query(nativeQuery = true, value = "SELECT verb FROM user_verb WHERE user_id = :userId")
+	Iterable<Integer> findAllVerbIdsByUserId(@Param("userId") UUID userId);
+
 }
