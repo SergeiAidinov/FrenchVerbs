@@ -10,13 +10,11 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.RequiredArgsConstructor;
 
 @Entity
 @Table(name = "user_verb")
-@NoArgsConstructor
-@Setter
+@RequiredArgsConstructor
 public class UserVerb {
 
 	@Id
@@ -25,13 +23,8 @@ public class UserVerb {
 	@Column(name = "id")
 	private UUID id;
 	@Column(name = "user_id")
-	private UUID userId;
+	private final UUID userId;
 	@Column(name = "verb")
-	private Integer verb;
-
-	public UserVerb(UUID userId, Integer verb) {
-		this.userId = userId;
-		this.verb = verb;
-	}
+	private final Integer verb;
 
 }
