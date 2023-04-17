@@ -24,7 +24,7 @@ public class OpenApiConfig {
 	@Bean
 	Info info() {
 		return new Info().title("Приложение для запомнинаия спряжения неправильных глаголов французского языка")
-				.description("Дипломный проект").version("1.0").contact(contact());
+				.description("Pet project").version("1.0").contact(contact());
 	}
 
 	@Bean
