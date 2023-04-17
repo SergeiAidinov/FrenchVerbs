@@ -3,7 +3,7 @@
 
 --CREATE IF NOT EXISTS EXTENSION "uuid-ossp";
 CREATE TABLE IF NOT EXISTS verb(
-verb_id SERIAL PRIMARY KEY,
+verb_id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
                         infinitive VARCHAR(15) UNIQUE NOT NULL,
                         je VARCHAR(15) NOT NULL,
                         tu VARCHAR(15) NOT NULL,

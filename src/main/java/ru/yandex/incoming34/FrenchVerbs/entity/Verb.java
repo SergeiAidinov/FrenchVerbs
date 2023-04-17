@@ -1,11 +1,14 @@
 package ru.yandex.incoming34.FrenchVerbs.entity;
 
+import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,9 +26,10 @@ import lombok.Setter;
 public class Verb {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "verb_id")
-	private Integer id;
+	private UUID id;
 	private String infinitive;
 	private String je;
 	private String tu;
@@ -35,5 +39,12 @@ public class Verb {
 	private String vous;
 	private String ils;
 	private String elles;
+	/*
+	 * @ManyToMany
+	 * 
+	 * @JoinTable(name = "user_verb", joinColumns = @JoinColumn(name = "verb_id"),
+	 * inverseJoinColumns = @JoinColumn(name = "user_id")) private List<UserEntity>
+	 * users;
+	 */
 
 }

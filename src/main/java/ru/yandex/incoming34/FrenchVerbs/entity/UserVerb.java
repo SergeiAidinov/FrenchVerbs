@@ -24,7 +24,7 @@ public class UserVerb {
 	private UUID id;
 	@Column(name = "user_id")
 	private final UUID userId;
-	@Column(name = "verb")
-	private final Integer verb;
+	@Column(name = "verb_id")
+	private final UUID verb;
 
 }
