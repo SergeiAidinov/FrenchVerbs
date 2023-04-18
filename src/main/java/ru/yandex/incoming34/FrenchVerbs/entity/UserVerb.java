@@ -10,32 +10,21 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Entity
-@Table(name = "verb")
-public class Verb {
+@Table(name = "user_verb")
+@RequiredArgsConstructor
+public class UserVerb {
 
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "verb_id")
+	@Column(name = "id")
 	private UUID id;
-	private String infinitive;
-	private String je;
-	private String tu;
-	private String il;
-	private String elle;
-	private String nous;
-	private String vous;
-	private String ils;
-	private String elles;
+	@Column(name = "user_id")
+	private final UUID userId;
+	@Column(name = "verb_id")
+	private final UUID verb;
 
 }
