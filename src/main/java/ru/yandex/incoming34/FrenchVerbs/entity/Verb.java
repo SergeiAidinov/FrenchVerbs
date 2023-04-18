@@ -14,13 +14,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
 @Entity
 @Table(name = "verb")
 public class Verb {
@@ -39,12 +37,5 @@ public class Verb {
 	private String vous;
 	private String ils;
 	private String elles;
-	/*
-	 * @ManyToMany
-	 * 
-	 * @JoinTable(name = "user_verb", joinColumns = @JoinColumn(name = "verb_id"),
-	 * inverseJoinColumns = @JoinColumn(name = "user_id")) private List<UserEntity>
-	 * users;
-	 */
 
 }
