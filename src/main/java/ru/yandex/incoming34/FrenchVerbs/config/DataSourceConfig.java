@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootConfiguration
-@PropertySource("classpath:application.properties")
+@PropertySource(value = "classpath:application.properties")
 @ComponentScan(basePackages = "ru.yandex.incoming34.FrenchVerbs.**")
 public class DataSourceConfig {
 
