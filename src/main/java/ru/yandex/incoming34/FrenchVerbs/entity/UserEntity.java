@@ -3,18 +3,17 @@ package ru.yandex.incoming34.FrenchVerbs.entity;
 import java.util.List;
 import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
 import org.hibernate.annotations.GenericGenerator;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -40,6 +39,6 @@ public class UserEntity {
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "user_verb", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "verb_id"))
-	private List<Verb> verbs;
+	private List<ru.yandex.incoming34.FrenchVerbs.entity.Verb> verbs;
 
 }

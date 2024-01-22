@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import ru.yandex.incoming34.FrenchVerbs.entity.UserEntity;
 import ru.yandex.incoming34.FrenchVerbs.entity.UserVerb;
 import ru.yandex.incoming34.FrenchVerbs.entity.Verb;
@@ -20,7 +20,7 @@ import ru.yandex.incoming34.FrenchVerbs.repository.UserVerbRepository;
 import ru.yandex.incoming34.FrenchVerbs.repository.VerbRepository;
 
 @RestController
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class VerbController {
 
 	private final VerbRepository verbRepository;

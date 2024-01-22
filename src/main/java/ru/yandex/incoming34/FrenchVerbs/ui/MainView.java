@@ -1,4 +1,4 @@
-package org.vaadin.example;
+package ru.yandex.incoming34.FrenchVerbs.ui;
 
 import java.util.Iterator;
 import java.util.List;

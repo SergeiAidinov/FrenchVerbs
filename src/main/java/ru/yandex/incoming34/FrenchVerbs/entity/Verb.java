@@ -2,12 +2,6 @@ package ru.yandex.incoming34.FrenchVerbs.entity;
 
 import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
@@ -19,14 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity
-@Table(name = "verb")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "verb")
 public class Verb {
 
-	@Id
-	@GeneratedValue(generator = "UUID")
+	@jakarta.persistence.Id
+	@jakarta.persistence.GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "verb_id")
+	@jakarta.persistence.Column(name = "verb_id")
 	private UUID id;
 	private String infinitive;
 	private String je;
