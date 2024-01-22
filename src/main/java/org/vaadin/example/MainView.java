@@ -47,10 +47,9 @@ public class MainView extends VerticalLayout {
 					FrenchLettersUtils.Letters letter = iterator.next();
 					Button nextButton = new Button(String.valueOf(letter.getSymbol()));
 
-					/*
-					 * nextButton.addActionListener( clickEvent ->
-					 * answerField.setValue(answerField.getValue() + letter.getSymbol()));
-					 */
+					nextButton.addSingleClickListener(
+							clickEvent -> answerField.setValue(answerField.getValue() + letter.getSymbol()));
+
 					horizontalLayout.add(nextButton);
 
 				}
@@ -58,7 +57,8 @@ public class MainView extends VerticalLayout {
 			verticalLayout.add(horizontalLayout);
 		}
 
-		// verticalLayout.add(respondButton); verticalLayout.setVisible(true);
+		verticalLayout.add(respondButton);
+		verticalLayout.setVisible(true);
 		add(verticalLayout);
 
 	}
@@ -82,14 +82,16 @@ public class MainView extends VerticalLayout {
 	}
 
 	private Button createRespondButton() {
-		Button respondButton = new Button(RESPOND); // respondButton.setWidth(WIDTH);
-		/*
-		 * respondButton.addActionListener(clickEvent -> {
-		 * 
-		 * String answer = answerField.getValue(); inviteField.setValue(answer);
-		 * 
-		 * });
-		 */
+		Button respondButton = new Button(RESPOND);
+		respondButton.setWidth(WIDTH);
+
+		respondButton.addSingleClickListener(clickEvent -> {
+
+			String answer = answerField.getValue();
+			inviteField.setValue(answer);
+
+		});
+
 		return respondButton;
 	}
 
