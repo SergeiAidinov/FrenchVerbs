@@ -15,9 +15,7 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 
 @SpringBootConfiguration
-//@ComponentScan(value = { "ru.yandex.incoming34.FrenchVerbs.controller.*" })
 @ComponentScan(basePackageClasses = { ru.yandex.incoming34.FrenchVerbs.controller.VerbController.class })
-//@ComponentScan("ru.yandex.incoming34.FrenchVerbs.**")
 public class OpenApiConfig {
 
 	@Bean
@@ -38,7 +36,7 @@ public class OpenApiConfig {
 		return new Contact().email("incoming34@yandex.ru").name("Sergei Aidinov");
 	}
 
-	// @Bean
+	@SuppressWarnings("deprecation")
 	private String componentVersion() {
 		String propertiesFileName = "pom.xml";
 		String componentVersion = "Версия не указана";
