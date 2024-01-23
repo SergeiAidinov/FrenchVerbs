@@ -3,8 +3,8 @@
 
 INSERT INTO verb (infinitive, je, tu, il, elle, nous, vous, ils, elles) VALUES
 ('aller', 'vais', 'vas', 'va', 'va', 'allons', 'allez', 'vont', 'vont'),
-('avoir', 'ai', 'as', 'a', 'a', 'avons', 'avez', 'ont', 'ont')
-
+('avoir', 'ai', 'as', 'a', 'a', 'avons', 'avez', 'ont', 'ont'),
+('être', 'suis', 'es', 'est', 'est', 'sommes', 'êtes', 'sont', 'sont')
 ;
 
 --rollback DROP TABLE products;

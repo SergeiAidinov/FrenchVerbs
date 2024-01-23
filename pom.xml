@@ -118,6 +118,10 @@
 			<artifactId>vaadin-testbench-junit5</artifactId>
 			<version>24.3.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<defaultGoal>spring-boot:run</defaultGoal>
