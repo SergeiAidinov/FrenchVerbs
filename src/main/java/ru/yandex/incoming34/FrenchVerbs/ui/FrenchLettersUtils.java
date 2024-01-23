@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class FrenchLettersUtils {
 
 	private static final Character _A_ACCENT_GRAVE = 'à';
@@ -45,7 +42,7 @@ public class FrenchLettersUtils {
 
 	};
 
-	public List<Letters> getAllLetters() {
+	public static List<Letters> getAllLetters() {
 		return Arrays.stream(Letters.values()).collect(Collectors.toList());
 
 	}

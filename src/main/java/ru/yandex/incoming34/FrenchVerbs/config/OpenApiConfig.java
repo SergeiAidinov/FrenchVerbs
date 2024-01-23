@@ -5,7 +5,6 @@ import java.util.Objects;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
 import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -15,7 +14,7 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 
 @SpringBootConfiguration
-@ComponentScan(basePackageClasses = { ru.yandex.incoming34.FrenchVerbs.controller.VerbController.class })
+//@ComponentScan(basePackageClasses = { ru.yandex.incoming34.FrenchVerbs.controller.VerbController.class })
 public class OpenApiConfig {
 
 	@Bean

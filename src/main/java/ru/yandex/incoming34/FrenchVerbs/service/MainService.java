@@ -1,19 +1,22 @@
 package ru.yandex.incoming34.FrenchVerbs.service;
 
-import org.apache.commons.lang3.tuple.Triple;
-import org.javatuples.Pair;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
 import ru.yandex.incoming34.FrenchVerbs.repository.VerbRepository;
 
-@Service(value = "mainservice")
+@Service
+@AllArgsConstructor
 public class MainService {
 
-	@Autowired
-	VerbRepository verbRepository;
+	private final VerbRepository verbRepository;
 
 	public Iterable<ru.yandex.incoming34.FrenchVerbs.entity.Verb> find() {
 		return verbRepository.findAll();
+	}
+
+	public void responded(String answer) {
+		System.out.println("Responded: " + answer);
 	}
 
 }
