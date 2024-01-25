@@ -34,14 +34,14 @@ public class Verb {
 
 	public String getOrdinal(int ordinal) {
 		return switch (ordinal) {
-		case 1 -> je;
-		case 2 -> tu;
-		case 3 -> il;
-		case 4 -> elle;
-		case 5 -> nous;
-		case 6 -> vous;
-		case 7 -> ils;
-		case 8 -> elles;
+		case 0 -> je;
+		case 1 -> tu;
+		case 2 -> il;
+		case 3 -> elle;
+		case 4 -> nous;
+		case 5 -> vous;
+		case 6 -> ils;
+		case 7 -> elles;
 		default -> infinitive;
 		};
 	}

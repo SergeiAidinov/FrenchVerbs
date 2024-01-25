@@ -15,6 +15,6 @@ public interface VerbRepository extends CrudRepository<Verb, UUID> {
 	Verb findByInfinitive(String infinitive);
 
 	@Query(nativeQuery = true, value = "SELECT verb_id FROM verb")
-	List<UUID> findAllVerbsId();
+	List<UUID> findAllVerbsIds();
 
 }
