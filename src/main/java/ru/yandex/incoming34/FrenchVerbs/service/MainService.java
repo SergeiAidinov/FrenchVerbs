@@ -36,8 +36,13 @@ public class MainService {
 
 	}
 
-	public void responded(String answer) {
+	public boolean checkAnswer(UUID userId, String answer) {
 		System.out.println("Responded: " + answer);
+		Optional<TaskEntity> taskEntityOptional = taskRepository.findById(userId);
+		if (taskEntityOptional.isPresent()) {
+			return taskEntityOptional.get().getCorrectAnswer().equals(answer);
+		}
+		return false;
 	}
 
 	private Optional<TaskEntity> createTaskOfVerb(UUID userId, UUID verbId) {

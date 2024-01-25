@@ -78,7 +78,7 @@ public class MainView extends VerticalLayout {
 		respondButton.addSingleClickListener(clickEvent -> {
 			String answer = answerField.getValue();
 			inviteField.setValue(answer);
-			mainService.responded(answer);
+			mainService.checkAnswer(null, answer);
 		});
 		return respondButton;
 	}

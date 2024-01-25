@@ -21,4 +21,9 @@ public class MainController {
 		return mainService.askQuestion(userId);
 	}
 
+	@PutMapping("/answer")
+	public boolean answer(UUID userId, String answer) {
+		return mainService.checkAnswer(userId, answer);
+	}
+
 }
