@@ -1,5 +1,6 @@
 package ru.yandex.incoming34.FrenchVerbs.repository;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -20,6 +21,10 @@ public interface UserVerbRepository extends CrudRepository<UserVerb, UUID> {
 	Integer deleteByUserIdAndVerb(@Param("userId") UUID userId, @Param("verb") UUID verbId);
 
 	@Query(nativeQuery = true, value = "SELECT verb_id FROM user_verb WHERE user_id = :userId")
-	Iterable<String> findAllVerbIdsByUserId(@Param("userId") UUID userId);
+	List<UUID> findAllVerbIdsByUserId(@Param("userId") UUID userId);
+
+	// List<UUID> findAllIds();
+
+	boolean existsByUserId(UUID userId);
 
 }

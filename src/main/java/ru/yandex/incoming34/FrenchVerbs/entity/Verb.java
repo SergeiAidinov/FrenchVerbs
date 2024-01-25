@@ -32,4 +32,18 @@ public class Verb {
 	private String ils;
 	private String elles;
 
+	public String getOrdinal(int ordinal) {
+		return switch (ordinal) {
+		case 1 -> je;
+		case 2 -> tu;
+		case 3 -> il;
+		case 4 -> elle;
+		case 5 -> nous;
+		case 6 -> vous;
+		case 7 -> ils;
+		case 8 -> elles;
+		default -> infinitive;
+		};
+	}
+
 }
