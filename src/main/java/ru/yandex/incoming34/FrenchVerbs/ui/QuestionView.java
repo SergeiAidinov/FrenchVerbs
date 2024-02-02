@@ -16,9 +16,9 @@ import com.vaadin.flow.router.Route;
 import lombok.AllArgsConstructor;
 import ru.yandex.incoming34.FrenchVerbs.service.MainService;
 
-@Route
+@Route(value = "/question")
 @AllArgsConstructor
-public class MainView extends VerticalLayout {
+public class QuestionView extends VerticalLayout {
 
 	private final MainService mainService;
 
@@ -78,7 +78,8 @@ public class MainView extends VerticalLayout {
 		respondButton.addSingleClickListener(clickEvent -> {
 			String answer = answerField.getValue();
 			inviteField.setValue(answer);
-			mainService.checkAnswer(null, answer);
+			// mainService.checkAnswer(null, answer);
+			respondButton.getUI().ifPresent(ui -> ui.navigate(CheckAnswer.class));
 		});
 		return respondButton;
 	}
