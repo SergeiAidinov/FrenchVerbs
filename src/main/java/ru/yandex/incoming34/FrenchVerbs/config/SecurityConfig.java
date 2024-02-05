@@ -33,7 +33,6 @@ public class SecurityConfig extends VaadinWebSecurity {
 	@Bean
 	public UserDetailsService users() {
 		UserDetails user = User.builder().username("user")
-				// password = password with this hash, don't tell anybody :-)
 				.password("{bcrypt}$2y$10$d8T3gKF9rf2Po2rnk3/Bb.pSjpzhiRfqM7JeRNmFfnGu/YpaDXP66").roles("USER").build();
 		UserDetails admin = User.builder().username("admin")
 				.password("{bcrypt}$2y$10$WzBD3ihFMjPZpo8LEHjQ7e2T.4YyufoDzmPspvWVqqoQBA6p8hfH.").roles("USER", "ADMIN")
