@@ -13,10 +13,12 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.textfield.TextFieldVariant;
 import com.vaadin.flow.router.Route;
 
+import jakarta.annotation.security.RolesAllowed;
 import lombok.AllArgsConstructor;
 import ru.yandex.incoming34.FrenchVerbs.service.MainService;
 
-@Route(value = "/question")
+@Route(value = "question")
+@RolesAllowed("USER")
 @AllArgsConstructor
 public class QuestionView extends VerticalLayout {
 
